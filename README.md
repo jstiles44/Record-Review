@@ -84,12 +84,18 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 src
 |__ assets/
       |__ fonts
-      |__ graphics
       |__ images
-      |__ mockups
 |__ components/
-      |__ Header.jsx
+      |__ containers/
+            |__ AlbumsContainer.jsx
+            |__ ReviewsContainer.jsx
+            |__ SignIn.jsx
+            |__ SignUp.jsx
 |__ services/
+      |__ api-config.js
+      |__ auth.js
+      |__ albums.js
+      |__ reviews.js
 
 ```
 
