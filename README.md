@@ -45,7 +45,7 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 > Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
-![Wireframes](https://lucid.app/lucidchart/e3702673-6fa2-46fd-897c-a87d9504f0c2/edit?beaconFlowId=6026D460006C0540&page=0_0#)
+[Wireframes](https://lucid.app/lucidchart/e3702673-6fa2-46fd-897c-a87d9504f0c2/edit?beaconFlowId=6026D460006C0540&page=0_0#)
 
 
 #### Component Tree
