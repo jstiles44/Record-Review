@@ -31,11 +31,11 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | Front End Framework |
+|   React Router   | allow inter page linking and routing for front end |
+| Axios |Allows for backend-frontend communication ie API calls|
+|     Ruby on Rails     | Back End Framework |
+|  bcrypt/jwt  | User authorization setup |
 
 <br>
 
