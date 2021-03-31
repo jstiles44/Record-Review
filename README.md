@@ -43,7 +43,6 @@
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
 [Wireframes](https://lucid.app/lucidchart/e3702673-6fa2-46fd-897c-a87d9504f0c2/edit?beaconFlowId=6026D460006C0540&page=0_0#)
 
@@ -83,9 +82,16 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Create backend/Database  |    H     |     3 hrs      |     0 hrs     |   TBD    |
+| Models |    H     |     1 hr      |     0 hrs     |     TBD     |    
+| Controllers |   H     |     1 hr  |     0 hrs       |     TBD   |
+| Routes |    H     |     1 hr      |     0 hrs     |     TBD     | 
+| Full Crud Back-End |    H     |     3 hrs      |     0 hrs     |     TBD     | 
+| Structuring React Components|    H     |     3 hrs      |     0 hrs     |     TBD     |
+| React Routes/Links |    H     |     3 hrs      |     0 hrs     |     TBD     |
+| Full Crud Front-End |    H     |     4 hrs      |     0 hrs     |     TBD     | 
+| Styling/CSS |    H     |     6 hrs      |     0 hrs     |     TBD     | 
+| TOTAL               |    H     |     31 hrs      |    0 hrs     |     TBD     |
 
 > _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
