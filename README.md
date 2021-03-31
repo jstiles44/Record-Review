@@ -9,10 +9,10 @@
 
 ## MVP
 
--RESTful web application
--Full CRUD back-end and front-end
--User Authorization
--Full Review functionality
+- RESTful web application
+- Full CRUD back-end and front-end
+- User Authorization
+- Full Review functionality
 
 
 <br>
