@@ -1,7 +1,7 @@
 import api from './api-config';
 
 export const getAllReviews = async () => {
-  const resp = await api.get('/albums/:album_id/reviews');
+  const resp = await api.get('/album/:album_id/reviews');
   return resp.data;
 }
 

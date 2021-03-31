@@ -18,7 +18,7 @@ class AlbumsController < ApplicationController
     @album = Album.new(album_params)
 
     if @album.save
-      render json: @album, status: :created, location: @album
+      render json: @album, status: :created
     else
       render json: @album.errors, status: :unprocessable_entity
     end
