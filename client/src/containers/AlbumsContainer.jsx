@@ -66,6 +66,7 @@ export default function AlbumsContainer(props) {
       <Route path='/albums/:id'>
         <AlbumDetails
           reviews={reviews}
+          albums={albums}
         />
       </Route>
       <Route path='/albums'>
