@@ -12,14 +12,18 @@ export default function Albums(props) {
       {
         albums.map(album => (
           <React.Fragment key={album.id}>
-            <Link to={`/albums/${album.id}`}><p>{album.title}</p></Link>
-            {
+            <Link to={`/albums/${album.id}`}>
+              <h3>{album.title}</h3>
+              <h5>{album.release_year}</h5>
+              <img src={album.album_url} alt={album.title}/>
+            </Link>
+            {/* {
               currentUser?.id === album.user_id &&
               <>
                 <Link to={`/albums/${album.id}/edit`}><button>Edit</button></Link>
                 <button onClick={() => handleOpen(album.id)}>delete</button>
               </>
-            }
+            } */}
           </React.Fragment>
         ))
       }

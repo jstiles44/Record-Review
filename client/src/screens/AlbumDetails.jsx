@@ -1,13 +1,17 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { postReview } from '../services/reviews';
 import { getOneAlbum } from '../services/albums';
+import Modal from '../components/Modal';
 
 export default function AlbumDetails(props) {
+  const [open, handleOpen] = useState(false)
   const [albumItem, setAlbumItem] = useState([]);
   const [selectedReview, setSelectedReview] = useState('');
   const { id } = useParams();
-  const { albums } = props;
+  const { albums, handleDelete, currentUser } = props;
 
   useEffect(() => {
     const fetchAlbumItem = async () => {
@@ -31,23 +35,31 @@ export default function AlbumDetails(props) {
   return (
     <div>
       
-        <h3>{albumItem}</h3>
+      <h3>{albumItem.title}</h3>
+      <h4>{albumItem.release_year}</h4>
+      <img src={albumItem.album_url} alt={albumItem.title} />
+      
+      {
+              currentUser?.id === albumItem.user_id &&
+              <>
+                <Link to={`/albums/${albumItem.id}/edit`}><button>Edit</button></Link>
+                <button onClick={() => handleOpen(albumItem.id)}>delete</button>
+              </>
+            }
+       {open && (
+        <Modal
+          open={open}
+          handleOpen={handleOpen}
+          handleDelete={handleDelete}
+        />
+      )}
         
-      {/* <h3>{albumItem.album_art}</h3> */}
-      {/* {albumItem?.map(album => (
-        <p key={album.id}>{album.title}</p>
-      ))} */}
+    
       <form onSubmit={(e) => {
         e.preventDefault()
         handleSubmit()
       }}>
-        {/* <select onChange={handleChange} defaultValue='default'>
-          <option value='default' disabled>-- Select a flavor --</option>
-          {reviews.map(review => (
-            <option value={review.id}>{review}</option>
-          ))}
-        </select> */}
-        <button>add</button>
+      
       </form>
     </div>
   )

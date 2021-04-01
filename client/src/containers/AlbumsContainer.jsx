@@ -67,6 +67,8 @@ export default function AlbumsContainer(props) {
         <AlbumDetails
           reviews={reviews}
           albums={albums}
+          currentUser={currentUser}
+          handleDelete={handleDelete}
         />
       </Route>
       <Route path='/albums'>
