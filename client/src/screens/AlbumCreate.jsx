@@ -4,7 +4,8 @@ export default function AlbumCreate(props) {
   const [formData, setFormData] = useState({
     title: '',
     release_year: 0,
-    album_url: ''
+    album_url: '',
+    user_id: props.currentUser.id
   })
   const { title, release_year, album_url } = formData;
   const { handleCreate } = props;

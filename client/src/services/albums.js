@@ -11,7 +11,7 @@ export const getOneAlbum = async (id) => {
 }
 
 export const postAlbum = async (albumData) => {
-  const resp = await api.post('/albums', { album: albumData });
+  const resp = await api.post('/albums', albumData );
   return resp.data;
 }
 

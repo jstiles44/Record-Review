@@ -42,6 +42,7 @@ export default function AlbumDetails(props) {
       {
               currentUser?.id === albumItem.user_id &&
               <>
+                <Link to={`/albums/${albumItem.id}/reviews`}><button>Reviews</button></Link>
                 <Link to={`/albums/${albumItem.id}/edit`}><button>Edit</button></Link>
                 <button onClick={() => handleOpen(albumItem.id)}>delete</button>
               </>

@@ -10,13 +10,13 @@ class AlbumsController < ApplicationController
 
   # GET /albums/1
   def show
-    render json: @album
+    render json: @album, include: :reviews
   end
 
   # POST /albums
   def create
     @album = Album.new(album_params)
-
+    
     if @album.save
       render json: @album, status: :created
     else
