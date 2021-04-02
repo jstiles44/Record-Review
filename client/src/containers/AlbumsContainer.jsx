@@ -40,10 +40,10 @@ export default function AlbumsContainer(props) {
     history.push('/albums');
   }
 
-  const handleCreateReview = async (reviewData) => {
-    const newReview = await postReview(reviewData);
+  const handleCreateReview = async (id, reviewData) => {
+    const newReview = await postReview(id, reviewData);
     setReviews(prevState => [...prevState, newReview]);
-    // history.push(`/albums/${albumItem.id}/reviews`);
+    history.push(`/albums/${id}/reviews`);
   }
 
   const handleUpdate = async (id, albumData) => {

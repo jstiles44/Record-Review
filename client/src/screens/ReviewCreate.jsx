@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useParams } from 'react-router-dom'
 
 export default function ReviewCreate(props) {
   const [formData, setFormData] = useState({
@@ -6,6 +7,7 @@ export default function ReviewCreate(props) {
   })
   const { review } = formData;
   const { handleCreateReview } = props;
+  const { id } = useParams()
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,7 +22,7 @@ export default function ReviewCreate(props) {
   return (
     <form onSubmit={(e) => {
       e.preventDefault();
-      handleCreateReview(formData);
+      handleCreateReview(id, formData);
     }}>
       <h3>Write a Review</h3>
       <label>

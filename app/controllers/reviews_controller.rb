@@ -3,9 +3,11 @@ class ReviewsController < ApplicationController
   before_action :authorize_request, only: :create
   # GET /reviews
   def index
-    @reviews = Review.all
-
-    render json: @reviews
+    @album = Album.find(params[:album_id])
+    @user = User.find(params[:user_id])
+    @reviews = Review.where(album_id: @album.id).all
+    
+    render json: @reviews, include:[:album, :user], status: :ok
   end
 
   # GET /reviews/1
@@ -18,9 +20,11 @@ class ReviewsController < ApplicationController
     @album = Album.find(params[:album_id])
     # @review = Review.new(review_params)
     # @review.album = @album
-    @review = Review.where(album_id: @album.id).new(review_params)
-    @review.user = @current_user
-  
+    @review = Review.where(user_id: @current_user.id).new(review_params)
+    @review.album = @album
+    # @review.user_id = @current_user
+    # @review = Review.new(review_params)
+    # @review.user_id = current_user.id if user_signed_in?
 
     if @review.save
       render json: @review, status: :created

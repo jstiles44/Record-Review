@@ -15,9 +15,9 @@ User.destroy_all
 
 puts "#{User.count} users created"
 
-Album.create!(title: 'Ride the Lightning', release_year: 1984, user: @admin, album_url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmannersofhate.com%2Fwp-content%2Fuploads%2F2019%2F07%2Fmetallica-ride-the-lightning-cd-original-nuevo-D_NQ_NP_853811-MLM27403290989_052018-F-1024x1024.jpg&f=1&nofb=1')
+Album.create!(title: 'Ride the Lightning', release_year: 1984, user: @admin, album_url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.w82lJLcknhD7rdSaBE53twHaE7%26pid%3DApi&f=1')
 
-Album.create!(title: 'Cowboys From Hell', release_year: 1990, user: @admin, album_url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.discogs.com%2FGlmvd_cdpU3LnOatdrPUGj1nvNo%3D%2Ffit-in%2F300x300%2Ffilters%3Astrip_icc()%3Aformat(jpeg)%3Amode_rgb()%3Aquality(40)%2Fdiscogs-images%2FR-3794743-1344705499-7652.jpeg.jpg&f=1&nofb=1')
+Album.create!(title: 'Cowboys From Hell', release_year: 1990, user: @admin, album_url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.u068IqFzTBOtYiCyULkssAAAAA%26pid%3DApi&f=1')
 
 @still_bill = Album.create!(title: 'Still Bill', release_year: 1972, user: @admin, album_url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FI%2F5127VPY7q1L._SX300_QL70_.jpg&f=1&nofb=1')
 

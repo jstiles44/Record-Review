@@ -5,7 +5,7 @@ export const getAllReviews = async () => {
   return resp.data;
 }
 
-export const postReview = async (reviewData) => {
-  const resp = await api.post('/albums/:album_id/reviews', { review: reviewData });
+export const postReview = async ( album_id, reviewData) => {
+  const resp = await api.post(`/albums/${album_id}/reviews`, { review: reviewData });
   return resp.data;
 }
