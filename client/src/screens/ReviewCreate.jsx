@@ -25,7 +25,7 @@ export default function ReviewCreate(props) {
       <h3>Write a Review</h3>
       <label>
        Review:
-        <input
+        <textarea
           type='text'
           name='review'
           value={review}

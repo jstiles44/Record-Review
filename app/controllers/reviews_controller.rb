@@ -16,9 +16,11 @@ class ReviewsController < ApplicationController
   # POST /reviews
   def create
     @album = Album.find(params[:album_id])
-    @review = Review.new(review_params)
-    @review.album = @album
+    # @review = Review.new(review_params)
+    # @review.album = @album
+    @review = Review.where(album_id: @album.id).new(review_params)
     @review.user = @current_user
+  
 
     if @review.save
       render json: @review, status: :created
