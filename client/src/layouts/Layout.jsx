@@ -7,7 +7,7 @@ export default function Layout(props) {
   return (
     <div className="nav-div">
       <header className="nav-header">
-        <Link to='/albums'>
+        <Link className='record-review-link' to='/albums'>
           <h1 className='record-review'>Record Review</h1>
         </Link>
         {

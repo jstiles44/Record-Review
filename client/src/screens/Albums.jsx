@@ -17,7 +17,7 @@ export default function Albums(props) {
       {
         albums.map(album => (
           <React.Fragment key={album.id}>
-            <Link to={`/albums/${album.id}`}>
+            <Link className='album-link' to={`/albums/${album.id}`}>
               <div className='album-container'>
               <h3 className='album-title'>{album.title}</h3>
               <h5 className='release-year'>{album.release_year}</h5>

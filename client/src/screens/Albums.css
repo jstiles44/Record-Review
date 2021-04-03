@@ -12,7 +12,7 @@
 
 .album-container {
   background-color: #16679a;
-  box-shadow: 5px 10px;
+  box-shadow: 5px 5px #0f80aa;
   /* width: 25%; */
   margin: 10px;
   padding-left: 10px;
@@ -31,12 +31,14 @@
 .header-title {
   background-color: #1a5b92;
   
+  
 }
 
 .header {
   background-color: #1a5b92;
   margin: 0;
   padding-top: 30px;
+  font-weight: bolder;
 }
 
 .add-button-div {
@@ -45,10 +47,14 @@
 
 .album-title {
   text-decoration: none;
-  color: red;
+  color: white;
 }
 
 .release-year {
-  color: red;
+  color: white;
   text-decoration: none;
+}
+
+.album-link {
+  height: 25%;
 }

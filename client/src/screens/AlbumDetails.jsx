@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { postReview } from '../services/reviews';
 import { getOneAlbum } from '../services/albums';
 import Modal from '../components/Modal';
+import './AlbumDetails.css'
 
 export default function AlbumDetails(props) {
   const [open, handleOpen] = useState(false)
@@ -33,16 +34,16 @@ export default function AlbumDetails(props) {
   }
 
   return (
-    <div>
+    <div className='details-container'>
       
-      <h3>{albumItem.title}</h3>
+      <h3 className='details-title'>{albumItem.title}</h3>
       <h4>{albumItem.release_year}</h4>
       <img src={albumItem.album_url} alt={albumItem.title} />
+      <Link to={`/albums/${albumItem.id}/reviews`}><button>Reviews</button></Link>
       
       {
               currentUser?.id === albumItem.user_id &&
               <>
-                <Link to={`/albums/${albumItem.id}/reviews`}><button>Reviews</button></Link>
                 <Link to={`/albums/${albumItem.id}/edit`}><button>Edit</button></Link>
                 <button onClick={() => handleOpen(albumItem.id)}>delete</button>
               </>
