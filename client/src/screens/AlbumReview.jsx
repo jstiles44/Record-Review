@@ -6,6 +6,7 @@ import { postReview } from '../services/reviews';
 import { getOneAlbum } from '../services/albums';
 import { getAllReviews } from '../services/reviews'
 import Modal from '../components/Modal';
+import './AlbumReview.css'
 
 export default function AlbumDetails(props) {
   const [open, handleOpen] = useState(false)
@@ -43,12 +44,15 @@ export default function AlbumDetails(props) {
   // }
 
   return (
-    <div>
+    <div className='reviews-div'>
       
-      <h3>{albumItem?.title}</h3>
+      <div className='album-div'>
+      <h3 className='reviews-title'>{albumItem?.title}</h3>
       <h4>{albumItem?.release_year}</h4>
-      <img src={albumItem?.album_url} alt={albumItem?.title} />
-
+        <img className='reviews-image' src={albumItem?.album_url} alt={albumItem?.title} />
+      </div>
+      
+      <div className='reviews-container'>
       <h1>Reviews</h1>
       {
         albumItem?.reviews.map(review => (
@@ -60,7 +64,7 @@ export default function AlbumDetails(props) {
       <Link to={`/albums/${albumItem?.id}/reviews/new`}>
         <button>Add a Review</button>
       </Link>
-
+      </div>
     
       {/* <form onSubmit={(e) => {
         e.preventDefault()
