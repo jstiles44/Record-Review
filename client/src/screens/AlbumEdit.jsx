@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import './AlbumEdit.css'
 
 export default function AlbumEdit(props) {
   const [formData, setFormData] = useState({
@@ -35,32 +36,36 @@ export default function AlbumEdit(props) {
   }
 
   return (
-    <form onSubmit={(e) => {
+    <div className='edit-album-container'>
+      <form className='edit-album-form' onSubmit={(e) => {
       e.preventDefault();
       handleUpdate(id, formData);
     }}>
       <h3>Edit Food</h3>
-      <label>
-       Title:
+      <label className='edit-title'>
+          Title:
         <input
+          className='edit-input'
           type='text'
           name='title'
           value={title}
           onChange={handleChange}
         />
       </label>
-      <label>
-       Release Year:
+      <label className='edit-release-year'>
+          Release Year:
         <input
+          className='edit-input'
           type='text'
           name='release_year'
           value={release_year}
           onChange={handleChange}
         />
       </label>
-      <label>
-       Album Art Link:
+      <label className='edit-album-art'>
+          Album Art Link:
         <input
+          className='edit-input'
           type='text'
           name='album_url'
           value={album_url}
@@ -68,6 +73,7 @@ export default function AlbumEdit(props) {
         />
       </label>
       <button>Submit</button>
-    </form>
+      </form>
+      </div>
   )
 }

@@ -1,0 +1,32 @@
+.edit-album-container {
+  background-color: #1a5b92;
+  height: 100vh;
+}
+
+.edit-album-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-title {
+  margin: 10px;
+  color: white;
+}
+
+.edit-release-year {
+  margin: 10px;
+  color: white;
+  position: relative;
+  right: 32px;
+}
+
+.edit-album-art {
+  margin: 10px;
+  color: white;
+  position: relative;
+  right: 43px;
+}
+
+.edit-input {
+  margin-left: 10px;
+}
