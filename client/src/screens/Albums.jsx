@@ -45,7 +45,7 @@ export default function Albums(props) {
       )}
     </div>
     <div className="add-button-div">
-    <Link to='/albums/new'><button>Add an Album</button></Link>
+    <Link to='/albums/new'><button className='add-album-button'>Add an Album</button></Link>
       </div>
       </>
   )

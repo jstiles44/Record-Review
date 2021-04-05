@@ -48,7 +48,7 @@ export default function Login(props) {
       </label>
       <br />
       <Link className='sign-up-login' to='/sign-up'>Sign Up</Link>
-      <button>Submit</button>
+      <button className='submit-button'>Submit</button>
       </form>
       </div> 
   )

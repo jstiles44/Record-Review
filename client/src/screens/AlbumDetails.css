@@ -22,14 +22,32 @@
 .reviews-button {
   margin-top: 10px;
   margin: 10px;
+  width: 75px;
+  height: 30px;
+  justify-self: center;
+  background-color: #0899ba;
+  border-radius: 5px;
+  align-self: center;
 }
 
 .edit-button {
   margin: 10px;
+  width: 75px;
+  height: 30px;
+  justify-self: center;
+  background-color: #0899ba;
+  border-radius: 5px;
+  align-self: center;
 }
 
 .delete-button {
   margin: 10px;
+  width: 75px;
+  height: 30px;
+  justify-self: center;
+  background-color: #0899ba;
+  border-radius: 5px;
+  align-self: center;
 }
 
 

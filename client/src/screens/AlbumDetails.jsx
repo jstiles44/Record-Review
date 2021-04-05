@@ -39,12 +39,12 @@ export default function AlbumDetails(props) {
       <h3 className='details-title'>{albumItem.title}</h3>
       <h4>{albumItem.release_year}</h4>
       <img className='details-image'src={albumItem.album_url} alt={albumItem.title} />
-      <Link className='reviews-button' to={`/albums/${albumItem.id}/reviews`}><button>Reviews</button></Link>
+      <Link  to={`/albums/${albumItem.id}/reviews`}><button className='reviews-button'>Reviews</button></Link>
       
       {
               currentUser?.id === albumItem.user_id &&
               <>
-                <Link className='edit-button' to={`/albums/${albumItem.id}/edit`}><button>Edit</button></Link>
+                <Link  to={`/albums/${albumItem.id}/edit`}><button className='edit-button'>Edit</button></Link>
                 <button className='delete-button' onClick={() => handleOpen(albumItem.id)}>delete</button>
               </>
             }

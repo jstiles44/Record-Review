@@ -62,7 +62,7 @@ export default function AlbumDetails(props) {
       }
 
       <Link to={`/albums/${albumItem?.id}/reviews/new`}>
-        <button>Add a Review</button>
+        <button className='add-a-review'>Add a Review</button>
       </Link>
       </div>
     

@@ -36,6 +36,7 @@ a {
   position: relative;
   left: -30px;
   align-self: center;
+  color: white;
 }
 
 .logout {
@@ -43,6 +44,9 @@ a {
   align-self: center;
   position: relative;
   right: 10px;
+  justify-self: center;
+  background-color: #0899ba;
+  border-radius: 5px;
 }
 
 .record-review-link{

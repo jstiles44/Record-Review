@@ -26,6 +26,11 @@
 .add-review-submit {
   align-self: center;
   width: 60px;
+  width: 75px;
+  height: 30px;
+  justify-self: center;
+  background-color: #0899ba;
+  border-radius: 5px;
 }
 
 .add-review {

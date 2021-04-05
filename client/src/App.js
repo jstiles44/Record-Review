@@ -54,7 +54,7 @@ function App() {
               handleSignUp={handleSignUp}
             />
           </Route>
-          <Route path='/albums'>
+          <Route path='/'>
             <AlbumsContainer
               currentUser={currentUser}
             />

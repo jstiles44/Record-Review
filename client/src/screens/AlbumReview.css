@@ -37,6 +37,14 @@
   grid-area: A;
 }
 
+.add-a-review {
+  height: 40px;
+  justify-self: center;
+  background-color: #0899ba;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
 @media screen and (max-width: 1360px) {
   .reviews-div {
     display: flex;

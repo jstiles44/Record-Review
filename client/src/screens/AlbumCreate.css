@@ -35,6 +35,12 @@
 
 .add-submit {
   margin: 10px;
+  width: 75px;
+  height: 30px;
+  align-self: center;
+  justify-self: center;
+  background-color: #0899ba;
+  border-radius: 5px;
 }
 
 .add-input {
