@@ -12,13 +12,13 @@ export default function Layout(props) {
         </Link>
         {
           currentUser ?
-            <>
+            <div className='header-div'>
               <p className="username">{currentUser.username}</p>
               <button className="logout" onClick={handleLogout}>Logout</button>
               
-            </>
+            </div>
             :
-            <Link to='/login'>Login/Sign Up</Link>
+            <Link className='login-sign-up' to='/login'>Login/Sign Up</Link>
         }
       </header>
       <hr className="break" />

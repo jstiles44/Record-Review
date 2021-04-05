@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Login.css'
 
 export default function Login(props) {
   const [formData, setFormData] = useState({
@@ -18,14 +19,16 @@ export default function Login(props) {
   }
 
   return (
+    <div className='login-div'>
     <form onSubmit={(e)=>{
       e.preventDefault();
       handleLogin(formData);
     }}>
-      <h3>Login</h3>
-      <label>
+      <h3 className='login-title'>Login</h3>
+      <label className='username-login'>
         Username:
         <input
+          className='login-input'
           type='text'
           name='username'
           value={username}
@@ -33,9 +36,10 @@ export default function Login(props) {
         />
       </label>
       <br />
-      <label>
+      <label className='password-login'>
         Password:
         <input
+          className='login-input'
           type='password'
           name='password'
           value={password}
@@ -43,8 +47,9 @@ export default function Login(props) {
         />
       </label>
       <br />
-      <Link to='/sign-up'>Sign Up</Link>
+      <Link className='sign-up-login' to='/sign-up'>Sign Up</Link>
       <button>Submit</button>
-    </form>
+      </form>
+      </div> 
   )
 }

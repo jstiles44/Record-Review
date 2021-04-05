@@ -1,0 +1,30 @@
+.login-input {
+  margin: 10px;
+}
+
+.password-login {
+  position: relative;
+  left: 3px;
+  color: white;
+}
+
+.username-login {
+  color: white;
+}
+
+.login-div {
+  background-color: #1a5b92;
+  height: 100vh;
+}
+
+.login-title {
+  margin: 0;
+  padding-top: 100px;
+  margin-bottom: 10px;
+}
+
+.sign-up-login {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px
+}

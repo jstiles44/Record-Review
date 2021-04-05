@@ -14,6 +14,11 @@ a {
   text-decoration: none;
 }
 
+.header-div {
+  display: flex;
+  justify-content: space-between;
+}
+
 .record-review{
   margin: 0;
   text-decoration: none;
@@ -29,7 +34,7 @@ a {
 
 .username {
   position: relative;
-  left: 500px;
+  left: -30px;
   align-self: center;
 }
 
@@ -42,4 +47,50 @@ a {
 
 .record-review-link{
   align-self: center;
+}
+
+.login-sign-up {
+  color: white;
+  align-self: center;
+}
+
+@media screen and (max-width: 500px) {
+  .header-div {
+    display: flex;
+    flex-direction: column;
+  }
+  .logout {
+    position: relative;
+    right: 29px;
+  }
+}
+
+@media screen and (max-width: 350px ) {
+  .nav-header {
+    display: flex;
+    flex-direction: column;
+    height: 125px;
+  }
+
+  .header-div {
+    position: relative;
+    left: 30px;
+  }
+}
+
+@media screen and (max-width: 245px ) {
+  .header-div {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .username {
+    position: relative;
+    left: 10px;
+  }  
+
+  .logout {
+    position: relative;
+    right: 60px;
+  }
 }

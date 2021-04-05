@@ -36,3 +36,18 @@
 .album-div {
   grid-area: A;
 }
+
+@media screen and (max-width: 1360px) {
+  .reviews-div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reviews-container {
+    align-self: center;
+    justify-content: center;
+    position: relative;
+    left: 4px;
+  }
+  
+}

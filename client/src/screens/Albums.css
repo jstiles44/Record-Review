@@ -5,7 +5,7 @@
   justify-content: center;
   padding-top: 10px;
   background-color: #1a5b92;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 
@@ -58,3 +58,4 @@
 .album-link {
   height: 25%;
 }
+

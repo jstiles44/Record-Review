@@ -28,7 +28,7 @@ function App() {
   const handleSignUp = async (formData) => {
     const userData = await registerUser(formData);
     setCurrentUser(userData);
-    history.push('/');
+    history.push('/albums');
   }
 
   const handleLogout = () => {
