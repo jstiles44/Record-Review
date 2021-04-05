@@ -1,0 +1,31 @@
+.sign-up-div {
+  background-color: #1a5b92;
+  height: 100vh;
+}
+
+.sign-up-title {
+  margin: 0;
+  padding-top: 100px;
+  margin-bottom: 10px;
+}
+
+.sign-up-input {
+  margin: 10px;
+}
+
+.username-sign-up {
+  color: white;
+}
+
+.email-sign-up {
+  color: white;
+  position: relative;
+  left: 18px;
+}
+
+.password-sign-up {
+  color: white;
+  position: relative;
+  left: 3px;
+}
+
