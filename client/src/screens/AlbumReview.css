@@ -1,0 +1,38 @@
+.reviews-div {
+  background-color: #1a5b92;
+  height: 100vh;
+}
+
+.reviews-title {
+  margin: 0;
+  padding-top: 100px;
+}
+
+.reviews-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+}
+
+.album-div {
+  /* position: relative;
+  right: 500px; */
+}
+
+.reviews-div {
+ display: grid;
+ grid-template-areas: 
+  "A R R R R R R R R R R"
+}
+
+.reviews-container {
+  position: relative;
+  right: 200px;
+ justify-content: center;
+ align-content: center;
+ grid-area: R;
+}
+
+.album-div {
+  grid-area: A;
+}

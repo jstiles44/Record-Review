@@ -1,0 +1,42 @@
+.add-album-container {
+  background-color: #1a5b92;
+  height: 100vh;
+}
+
+.add-an-album {
+  margin: 0;
+  padding-top: 100px;
+  margin-bottom: 10px;
+}
+
+.add-album-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-title {
+  margin: 10px;
+  color: white;
+}
+
+.add-release-year {
+  margin: 10px;
+  color: white;
+  position: relative;
+  right: 32px;
+}
+
+.add-album-art {
+  margin: 10px;
+  color: white;
+  position: relative;
+  right: 43px;
+}
+
+.add-submit {
+  margin: 10px;
+}
+
+.add-input {
+  margin-left: 10px;
+}

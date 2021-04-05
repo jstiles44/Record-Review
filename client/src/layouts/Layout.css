@@ -1,0 +1,45 @@
+a {
+  text-decoration: none;
+}
+
+.nav-header{
+  background-color: #1d4e89;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  top: 0;
+  position: sticky;
+  height: 80px;
+  text-decoration: none;
+}
+
+.record-review{
+  margin: 0;
+  text-decoration: none;
+  color: white;
+  align-self: center;
+}
+
+.break {
+  background-color: #585B56;
+  border: #DBD56E;
+  margin: 0;
+}
+
+.username {
+  position: relative;
+  left: 500px;
+  align-self: center;
+}
+
+.logout {
+  height: 30px;
+  align-self: center;
+  position: relative;
+  right: 10px;
+}
+
+.record-review-link{
+  align-self: center;
+}
