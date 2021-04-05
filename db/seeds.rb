@@ -25,6 +25,8 @@ Album.create!(title: 'Badmotorfinger', release_year: 1991, user: @admin, album_u
 
 Album.create!(title: 'American Recordings', release_year: 1994, user: @admin, album_url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fc%2Fc3%2FJohnnyCashAmericanRecordings.jpg&f=1&nofb=1')
 
+Album.create!(title: 'Ten', release_year: 1991, user: @admin, album_url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.myWLkKdhCAJONKiS2-9zPQHaG4%26pid%3DApi&f=1')
+
 puts "#{Album.count} albums created"
 
 Review.create!(review: 'This is Great!', user: @admin, album:@still_bill,  )
