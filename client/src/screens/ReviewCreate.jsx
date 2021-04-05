@@ -39,21 +39,22 @@ export default function ReviewCreate(props) {
       <img className='reviews-image' src={albumItem?.album_url} alt={albumItem?.title} />
       </div>
       <div className='review-form'>
-    <form onSubmit={(e) => {
+    <form className='review-form-submit' onSubmit={(e) => {
       e.preventDefault();
       handleCreateReview(id, formData);
     }}>
       <h3>Write a Review</h3>
-      <label>
-       Review:
+      <label className='add-review'>
+            Review:
         <textarea
+          className='add-review-input'
           type='text'
           name='review'
           value={review}
           onChange={handleChange}
         />
       </label>
-      <button>Submit</button>
+      <button className='add-review-submit'>Submit</button>
         </form>
         </div>
       </div>

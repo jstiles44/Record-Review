@@ -11,12 +11,44 @@
 }
 
 .review-form {
- 
   position: relative;
   right: 200px;
  justify-content: center;
  align-content: center;
  grid-area: R;
+}
+
+.review-form-submit {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-review-submit {
+  align-self: center;
+  width: 60px;
+}
+
+.add-review {
+  color: white;
+}
+
+.add-review-input {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 1360px) {
+  .add-review-div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .review-form {
+    align-self: center;
+    justify-content: center;
+    position: relative;
+    left: 4px;
+  }
+  
 }
 
 
