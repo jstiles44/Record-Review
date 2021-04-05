@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 10px;
-  background-color: #1a5b92;
+  background-color: #1a5b92 ;
   /* height: 100vh; */
 }
 
@@ -30,8 +30,6 @@
 
 .header-title {
   background-color: #1a5b92;
-  
-  
 }
 
 .header {

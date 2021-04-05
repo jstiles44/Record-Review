@@ -3,7 +3,7 @@ a {
 }
 
 .nav-header{
-  background-color: #1d4e89;
+  background: linear-gradient(45deg, #0f80aa, #1d4e89 ) ;
   padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
