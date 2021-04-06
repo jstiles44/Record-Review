@@ -25,6 +25,7 @@ Album.create!(title: 'Badmotorfinger', release_year: 1991, user: @admin, album_u
 
 Album.create!(title: 'American Recordings', release_year: 1994, user: @admin, album_url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fc%2Fc3%2FJohnnyCashAmericanRecordings.jpg&f=1&nofb=1')
 
+
 Album.create!(title: 'Ten', release_year: 1991, user: @admin, album_url: 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages.genius.com%2F8aaa6056d909ce698a5d2dc3a78f88bd.1000x1000x1.jpg&f=1&nofb=1')
 
 Album.create!(title: 'Dirt', release_year: 1992, user: @admin, album_url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.6Bn_EwJVV3mAeiEUUByWjwHaHa%26pid%3DApi&f=1')
@@ -36,6 +37,7 @@ Album.create!(title: 'Purgatory', release_year: 2017, user: @admin, album_url: '
 Album.create!(title: 'Sound & Fury', release_year: 2019, user: @admin, album_url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.pzJXTA1Al-BEjZWTxdr9TwHaHa%26pid%3DApi&f=1')
 
 Album.create!(title: 'The Wall', release_year: 1979, user: @admin, album_url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.BmCUH-juYuhV9fsy1MO05QHaGq%26pid%3DApi&f=1')
+
 
 puts "#{Album.count} albums created"
 
