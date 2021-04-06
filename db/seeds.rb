@@ -27,7 +27,7 @@ Album.create!(title: 'American Recordings', release_year: 1994, user: @admin, al
 
 Album.create!(title: 'Ten', release_year: 1991, user: @admin, album_url: 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages.genius.com%2F8aaa6056d909ce698a5d2dc3a78f88bd.1000x1000x1.jpg&f=1&nofb=1')
 
-Album.create!(title: 'dirt', release_year: 1992, user: @admin, album_url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.6Bn_EwJVV3mAeiEUUByWjwHaHa%26pid%3DApi&f=1')
+Album.create!(title: 'Dirt', release_year: 1992, user: @admin, album_url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.6Bn_EwJVV3mAeiEUUByWjwHaHa%26pid%3DApi&f=1')
 
 Album.create!(title: 'Wanted! The Outlaws', release_year: 1976, user: @admin, album_url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.4_Iee6afyLGuRogMU2wiEwHaHa%26pid%3DApi&f=1')
 
