@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 10px;
-  background-color: #1a5b92;
+  background-color: #1a5b92 ;
   /* height: 100vh; */
 }
 
@@ -30,8 +30,6 @@
 
 .header-title {
   background-color: #1a5b92;
-  
-  
 }
 
 .header {
@@ -43,6 +41,8 @@
 
 .add-button-div {
   background-color: #1a5b92;
+  padding-top: 20px;
+  padding-bottom: 100px;
 }
 
 .album-title {
@@ -57,5 +57,13 @@
 
 .album-link {
   height: 25%;
+}
+
+.add-album-button {
+  width: 75px;
+  height: 40px;
+  justify-self: center;
+  background-color: #0899ba;
+  border-radius: 5px;
 }
 

@@ -72,7 +72,7 @@ export default function AlbumEdit(props) {
           onChange={handleChange}
         />
       </label>
-      <button>Submit</button>
+      <button className='submit-button-edit'>Submit</button>
       </form>
       </div>
   )
