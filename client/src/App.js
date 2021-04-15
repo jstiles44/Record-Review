@@ -44,19 +44,24 @@ function App() {
         handleLogout={handleLogout}
       >
         <Switch>
-          <Route path='/login'>
+          {/* <Route path='/login'>
             <Login
               handleLogin={handleLogin}
             />
-          </Route>
+          </Route> */}
           <Route path='/sign-up'>
             <SignUp
               handleSignUp={handleSignUp}
             />
           </Route>
-          <Route path='/'>
+          <Route path='/albums'>
             <AlbumsContainer
               currentUser={currentUser}
+            />
+          </Route>
+          <Route path='/'>
+          <Login
+              handleLogin={handleLogin}
             />
           </Route>
         </Switch>
