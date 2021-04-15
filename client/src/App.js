@@ -44,11 +44,6 @@ function App() {
         handleLogout={handleLogout}
       >
         <Switch>
-          {/* <Route path='/login'>
-            <Login
-              handleLogin={handleLogin}
-            />
-          </Route> */}
           <Route path='/sign-up'>
             <SignUp
               handleSignUp={handleSignUp}

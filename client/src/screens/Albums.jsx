@@ -24,13 +24,7 @@ export default function Albums(props) {
                 <img className="album-image" src={album.album_url} alt={album.title} />
                 </div>
             </Link>
-            {/* {
-              currentUser?.id === album.user_id &&
-              <>
-                <Link to={`/albums/${album.id}/edit`}><button>Edit</button></Link>
-                <button onClick={() => handleOpen(album.id)}>delete</button>
-              </>
-            } */}
+         
           </React.Fragment>
         ))
       }

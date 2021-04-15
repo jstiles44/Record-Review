@@ -24,24 +24,6 @@ export default function AlbumDetails(props) {
   
   }, [])
 
-  // useEffect(() => {
-  //   const fetchReviewItem = async () => {
-  //     const reviewData = await getAllReviews(id);
-  //     setReviewItem(reviewData);
-  //     console.log(reviewData)
-  //   }
-  //   fetchReviewItem()
-  // }, [])
-
-  // const handleChange = (e) => {
-  //   const { value } = e.target;
-  //   setSelectedReview(value)
-  // }
-
-  // const handleSubmit = async () => {
-  //   const albumData = await postReview(id, selectedReview);
-  //   setAlbumItem(albumData);
-  // }
 
   return (
     <div className='reviews-div'>
@@ -66,12 +48,7 @@ export default function AlbumDetails(props) {
       </Link>
       </div>
     
-      {/* <form onSubmit={(e) => {
-        e.preventDefault()
-        handleSubmit()
-      }}>
-      
-      </form> */}
+    
     </div>
   )
 }
