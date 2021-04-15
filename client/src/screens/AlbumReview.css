@@ -18,15 +18,17 @@
 .reviews-div {
  display: grid;
  grid-template-areas: 
-  "A R R R R R R R R R R"
+  "A R R R R R R R R R R";
 }
 
 .reviews-container {
   position: relative;
   right: 200px;
- justify-content: center;
  align-content: center;
  grid-area: R;
+ display: flex;
+ flex-direction: column;
+
 }
 
 .album-div {
@@ -39,6 +41,12 @@
   background-color: #0899ba;
   border-radius: 5px;
   margin-top: 10px;
+}
+
+.mapped-review {
+  width: 50%;
+  align-self: center;
+  margin: 10px;
 }
 
 @media screen and (max-width: 1360px) {
@@ -55,3 +63,4 @@
   }
   
 }
+

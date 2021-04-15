@@ -14542,3 +14542,811 @@ Processing by AlbumsController#index as HTML
 Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.4ms | Allocations: 2040)
 
 
+Started GET "/auth/verify" for ::1 at 2021-04-15 11:02:16 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 36ms (Views: 1.4ms | ActiveRecord: 5.6ms | Allocations: 9054)
+
+
+Started GET "/album/:album_id/reviews" for ::1 at 2021-04-15 11:02:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/album/:album_id/reviews"):
+  
+Started GET "/albums" for ::1 at 2021-04-15 11:02:43 -0400
+Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (2.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+Completed 200 OK in 38ms (Views: 9.6ms | ActiveRecord: 21.3ms | Allocations: 13861)
+
+
+Started GET "/albums/84" for ::1 at 2021-04-15 11:02:45 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"84"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 84]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 25ms (Views: 21.4ms | ActiveRecord: 1.8ms | Allocations: 4240)
+
+
+Started GET "/albums/84" for ::1 at 2021-04-15 11:02:47 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"84"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 84]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1315)
+
+
+Started GET "/albums/84" for ::1 at 2021-04-15 11:02:58 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"84"}
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 84]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.6ms | Allocations: 1292)
+
+
+Started GET "/albums/84" for ::1 at 2021-04-15 11:03:00 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"84"}
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 84]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.6ms | Allocations: 1293)
+
+
+Started GET "/albums/84" for ::1 at 2021-04-15 11:03:01 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"84"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 84]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 1308)
+
+
+Started POST "/albums/84/reviews" for ::1 at 2021-04-15 11:03:06 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"review"=>{"review"=>"The reason I gave this 4 stars is because Cliff's bass needed to be higher in the mix, as always. Cliff's bass playing is too valuable of a thing not to raise it a notch or so in the mix. They should've lowered the guitars a bit in order to raise the bass some, since the guitars already benefit from a higher pitched, more definable sound whereas the bass needs extra lovin' in the mix to make individual notes and fills more audible."}, "album_id"=>"84"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:20:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:29:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:29:in `create'
+  [1m[36mReview Create (12.1ms)[0m  [1m[32mINSERT INTO "reviews" ("review", "user_id", "album_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["review", "The reason I gave this 4 stars is because Cliff's bass needed to be higher in the mix, as always. Cliff's bass playing is too valuable of a thing not to raise it a notch or so in the mix. They should've lowered the guitars a bit in order to raise the bass some, since the guitars already benefit from a higher pitched, more definable sound whereas the bass needs extra lovin' in the mix to make individual notes and fills more audible."], ["user_id", 18], ["album_id", 84], ["created_at", "2021-04-15 15:03:06.721095"], ["updated_at", "2021-04-15 15:03:06.721095"]]
+  ↳ app/controllers/reviews_controller.rb:29:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reviews_controller.rb:29:in `create'
+Completed 201 Created in 29ms (Views: 0.4ms | ActiveRecord: 15.3ms | Allocations: 6583)
+
+
+Started GET "/albums/84" for ::1 at 2021-04-15 11:03:06 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"84"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 84]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms | Allocations: 1389)
+
+
+Started GET "/albums/84" for ::1 at 2021-04-15 11:03:19 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"84"}
+  [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 84]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 1.5ms | Allocations: 1439)
+
+
+Started GET "/album/:album_id/reviews" for ::1 at 2021-04-15 11:03:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/album/:album_id/reviews"):
+  
+Started GET "/auth/verify" for ::1 at 2021-04-15 11:03:19 -0400
+Started GET "/albums" for ::1 at 2021-04-15 11:03:19 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AlbumsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1414)
+
+
+  [1m[36mAlbum Load (0.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+Completed 200 OK in 77ms (Views: 58.7ms | ActiveRecord: 18.2ms | Allocations: 20023)
+
+
+Started GET "/albums/84" for ::1 at 2021-04-15 11:03:44 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"84"}
+Started GET "/album/:album_id/reviews" for ::1 at 2021-04-15 11:03:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/album/:album_id/reviews"):
+  
+  [1m[36mAlbum Load (1.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+Started GET "/auth/verify" for ::1 at 2021-04-15 11:03:44 -0400
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 84]]
+Processing by AuthenticationController#verify as HTML
+Started GET "/albums" for ::1 at 2021-04-15 11:03:44 -0400
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Processing by AlbumsController#index as HTML
+Completed 200 OK in 34ms (Views: 5.4ms | ActiveRecord: 2.5ms | Allocations: 9791)
+
+
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 2415)
+
+
+  [1m[36mAlbum Load (4.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+Completed 200 OK in 57ms (Views: 45.0ms | ActiveRecord: 12.3ms | Allocations: 19657)
+
+
+Started GET "/albums/84" for ::1 at 2021-04-15 11:04:18 -0400
+Processing by AlbumsController#show as HTML
+Started GET "/album/:album_id/reviews" for ::1 at 2021-04-15 11:04:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/album/:album_id/reviews"):
+  
+  Parameters: {"id"=>"84"}
+Started GET "/albums" for ::1 at 2021-04-15 11:04:18 -0400
+Processing by AlbumsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-04-15 11:04:18 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAlbum Load (13.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+Completed 200 OK in 23ms (Views: 9.6ms | ActiveRecord: 13.0ms | Allocations: 10190)
+
+
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 7.2ms | Allocations: 3336)
+
+
+  [1m[36mAlbum Load (23.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (2.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 84]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 59ms (Views: 3.5ms | ActiveRecord: 38.7ms | Allocations: 21090)
+
+
+Started GET "/albums/84" for ::1 at 2021-04-15 11:04:31 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"84"}
+Started GET "/album/:album_id/reviews" for ::1 at 2021-04-15 11:04:31 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/album/:album_id/reviews"):
+  
+Started GET "/albums" for ::1 at 2021-04-15 11:04:31 -0400
+Processing by AlbumsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-04-15 11:04:31 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAlbum Load (2.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mAlbum Load (2.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+Completed 200 OK in 35ms (Views: 32.9ms | ActiveRecord: 2.1ms | Allocations: 11762)
+
+
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 84]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 32ms (Views: 0.3ms | ActiveRecord: 1.9ms | Allocations: 10667)
+
+
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 65ms (Views: 21.4ms | ActiveRecord: 2.5ms | Allocations: 20166)
+
+
+Started GET "/albums" for ::1 at 2021-04-15 11:06:50 -0400
+Processing by AlbumsController#index as HTML
+Started GET "/album/:album_id/reviews" for ::1 at 2021-04-15 11:06:50 -0400
+Started GET "/albums/84" for ::1 at 2021-04-15 11:06:50 -0400
+  [1m[36mAlbum Load (2.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 2.7ms | Allocations: 2660)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/album/:album_id/reviews"):
+  
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"84"}
+Started GET "/auth/verify" for ::1 at 2021-04-15 11:06:50 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (6.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 84]]
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 15ms (Views: 3.9ms | ActiveRecord: 7.4ms | Allocations: 2343)
+
+
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 6.8ms | Allocations: 2429)
+
+
+Started GET "/albums/86" for ::1 at 2021-04-15 11:08:00 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"86"}
+  [1m[36mAlbum Load (0.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.7ms | Allocations: 1469)
+
+
+Started GET "/albums/86" for ::1 at 2021-04-15 11:08:02 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"86"}
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.6ms | Allocations: 1468)
+
+
+Started GET "/album/:album_id/reviews" for ::1 at 2021-04-15 11:08:37 -0400
+Started GET "/albums/86" for ::1 at 2021-04-15 11:08:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/album/:album_id/reviews"):
+  
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"86"}
+Started GET "/albums" for ::1 at 2021-04-15 11:08:37 -0400
+Processing by AlbumsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-04-15 11:08:37 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAlbum Load (8.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 6.1ms | ActiveRecord: 8.0ms | Allocations: 4431)
+
+
+  [1m[36mAlbum Load (16.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 2.6ms | Allocations: 5309)
+
+
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 25ms (Views: 4.2ms | ActiveRecord: 17.6ms | Allocations: 8300)
+
+
+Started GET "/album/:album_id/reviews" for ::1 at 2021-04-15 11:09:07 -0400
+Started GET "/albums" for ::1 at 2021-04-15 11:09:07 -0400
+Started GET "/albums/86" for ::1 at 2021-04-15 11:09:07 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/album/:album_id/reviews"):
+  
+Processing by AlbumsController#index as HTML
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"86"}
+  [1m[36mAlbum Load (1.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+Started GET "/auth/verify" for ::1 at 2021-04-15 11:09:07 -0400
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mAlbum Load (1.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 1.1ms | Allocations: 8978)
+
+
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+Processing by AuthenticationController#verify as HTML
+  [1m[36mReview Load (1.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+Completed 200 OK in 14ms (Views: 3.5ms | ActiveRecord: 3.6ms | Allocations: 5497)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 2579)
+
+
+Started GET "/albums/86" for ::1 at 2021-04-15 11:10:08 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"86"}
+  [1m[36mAlbum Load (0.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.8ms | Allocations: 1469)
+
+
+Started GET "/albums/86" for ::1 at 2021-04-15 11:10:11 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"86"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.4ms | Allocations: 1468)
+
+
+Started GET "/albums/86" for ::1 at 2021-04-15 11:10:28 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"86"}
+Started GET "/album/:album_id/reviews" for ::1 at 2021-04-15 11:10:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/album/:album_id/reviews"):
+  
+Started GET "/albums" for ::1 at 2021-04-15 11:10:28 -0400
+Processing by AlbumsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-04-15 11:10:28 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAlbum Load (13.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  [1m[36mUser Load (11.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mAlbum Load (12.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+Completed 200 OK in 22ms (Views: 0.3ms | ActiveRecord: 11.6ms | Allocations: 3930)
+
+
+Completed 200 OK in 34ms (Views: 21.3ms | ActiveRecord: 12.0ms | Allocations: 6671)
+
+
+  [1m[36mReview Load (3.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 61ms (Views: 3.4ms | ActiveRecord: 16.7ms | Allocations: 14735)
+
+
+Started GET "/albums/86" for ::1 at 2021-04-15 11:11:46 -0400
+Started GET "/album/:album_id/reviews" for ::1 at 2021-04-15 11:11:46 -0400
+Started GET "/albums" for ::1 at 2021-04-15 11:11:46 -0400
+Started GET "/auth/verify" for ::1 at 2021-04-15 11:11:46 -0400
+Processing by AlbumsController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/album/:album_id/reviews"):
+  
+Processing by AlbumsController#show as HTML
+Processing by AuthenticationController#verify as HTML
+  Parameters: {"id"=>"86"}
+  [1m[36mAlbum Load (1.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mUser Load (9.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 29.1ms | ActiveRecord: 1.7ms | Allocations: 8269)
+
+
+  [1m[36mAlbum Load (9.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 9.6ms | Allocations: 3365)
+
+
+  [1m[36mReview Load (1.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 26ms (Views: 9.1ms | ActiveRecord: 10.8ms | Allocations: 5090)
+
+
+Started GET "/albums/86" for ::1 at 2021-04-15 11:12:43 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"86"}
+Started GET "/album/:album_id/reviews" for ::1 at 2021-04-15 11:12:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/album/:album_id/reviews"):
+  
+  [1m[36mAlbum Load (2.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+Started GET "/albums" for ::1 at 2021-04-15 11:12:43 -0400
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+Processing by AlbumsController#index as HTML
+  [1m[36mReview Load (2.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+  [1m[36mAlbum Load (2.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+Completed 200 OK in 33ms (Views: 3.8ms | ActiveRecord: 4.9ms | Allocations: 9150)
+
+
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 2.1ms | Allocations: 3743)
+
+
+Started GET "/auth/verify" for ::1 at 2021-04-15 11:12:43 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 5.2ms | Allocations: 3508)
+
+
+Started GET "/albums/86" for ::1 at 2021-04-15 11:13:09 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"86"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 1468)
+
+
+Started GET "/albums/86" for ::1 at 2021-04-15 11:13:12 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"86"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 10ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 1468)
+
+
+Started GET "/albums/86" for ::1 at 2021-04-15 11:13:25 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"86"}
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.6ms | Allocations: 1469)
+
+
+Started GET "/albums/86" for ::1 at 2021-04-15 11:13:36 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"86"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 1468)
+
+
+Started GET "/albums/86" for ::1 at 2021-04-15 11:13:45 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"86"}
+Started GET "/album/:album_id/reviews" for ::1 at 2021-04-15 11:13:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/album/:album_id/reviews"):
+  
+Started GET "/albums" for ::1 at 2021-04-15 11:13:45 -0400
+Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (5.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+  [1m[36mAlbum Load (4.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+Completed 200 OK in 84ms (Views: 27.1ms | ActiveRecord: 6.2ms | Allocations: 9324)
+
+
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+Completed 200 OK in 44ms (Views: 39.5ms | ActiveRecord: 4.5ms | Allocations: 4466)
+
+
+Started GET "/auth/verify" for ::1 at 2021-04-15 11:13:45 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 1373)
+
+
+Started GET "/albums/86" for ::1 at 2021-04-15 11:14:05 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"86"}
+Started GET "/album/:album_id/reviews" for ::1 at 2021-04-15 11:14:05 -0400
+Started GET "/albums" for ::1 at 2021-04-15 11:14:05 -0400
+Processing by AlbumsController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/album/:album_id/reviews"):
+  
+  [1m[36mAlbum Load (24.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+Started GET "/auth/verify" for ::1 at 2021-04-15 11:14:05 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mReview Load (19.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 50ms (Views: 3.5ms | ActiveRecord: 43.9ms | Allocations: 11195)
+
+
+  [1m[36mAlbum Load (21.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+Completed 200 OK in 53ms (Views: 30.9ms | ActiveRecord: 21.6ms | Allocations: 12550)
+
+
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 8.3ms | Allocations: 5507)
+
+
+Started GET "/albums/86" for ::1 at 2021-04-15 11:15:33 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"86"}
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 1.1ms | Allocations: 1468)
+
+
+Started GET "/albums/86" for ::1 at 2021-04-15 11:15:37 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"86"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 0.8ms | Allocations: 1468)
+
+
+Started GET "/albums/86" for ::1 at 2021-04-15 11:15:44 -0400
+Started GET "/album/:album_id/reviews" for ::1 at 2021-04-15 11:15:44 -0400
+Started GET "/albums" for ::1 at 2021-04-15 11:15:44 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"86"}
+  
+ActionController::RoutingError (No route matches [GET] "/album/:album_id/reviews"):
+  
+Processing by AlbumsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-04-15 11:15:44 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAlbum Load (5.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mAlbum Load (0.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 43ms (Views: 11.2ms | ActiveRecord: 6.4ms | Allocations: 10757)
+
+
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.7ms | Allocations: 3300)
+
+
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 3.9ms | Allocations: 3859)
+
+
+Started GET "/albums/86" for ::1 at 2021-04-15 11:16:40 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"86"}
+Started GET "/album/:album_id/reviews" for ::1 at 2021-04-15 11:16:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/album/:album_id/reviews"):
+  
+Started GET "/albums" for ::1 at 2021-04-15 11:16:40 -0400
+Processing by AlbumsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-04-15 11:16:40 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAlbum Load (4.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 51ms (Views: 4.1ms | ActiveRecord: 5.6ms | Allocations: 9602)
+
+
+  [1m[36mAlbum Load (3.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 0.7ms | ActiveRecord: 3.7ms | Allocations: 3037)
+
+
+Completed 200 OK in 41ms (Views: 36.5ms | ActiveRecord: 3.7ms | Allocations: 5187)
+
+
+Started GET "/albums/86" for ::1 at 2021-04-15 11:17:13 -0400
+Started GET "/albums" for ::1 at 2021-04-15 11:17:13 -0400
+Processing by AlbumsController#index as HTML
+Started GET "/album/:album_id/reviews" for ::1 at 2021-04-15 11:17:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/album/:album_id/reviews"):
+  
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"86"}
+Started GET "/auth/verify" for ::1 at 2021-04-15 11:17:13 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAlbum Load (8.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+Completed 200 OK in 40ms (Views: 31.8ms | ActiveRecord: 8.0ms | Allocations: 11017)
+
+
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 17ms (Views: 0.4ms | ActiveRecord: 1.5ms | Allocations: 5085)
+
+
+  [1m[36mReview Load (5.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 47ms (Views: 4.2ms | ActiveRecord: 5.8ms | Allocations: 13217)
+
+
+Started GET "/album/:album_id/reviews" for ::1 at 2021-04-15 11:18:02 -0400
+Started GET "/auth/verify" for ::1 at 2021-04-15 11:18:02 -0400
+Started GET "/albums/86" for ::1 at 2021-04-15 11:18:02 -0400
+Started GET "/albums" for ::1 at 2021-04-15 11:18:02 -0400
+  [1m[35m (6.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/album/:album_id/reviews"):
+  
+Processing by AuthenticationController#verify as HTML
+Processing by AlbumsController#index as HTML
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"86"}
+  [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 12.5ms | ActiveRecord: 12.5ms | Allocations: 21718)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 46ms (Views: 0.2ms | ActiveRecord: 15.9ms | Allocations: 28875)
+
+
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 72ms (Views: 31.9ms | ActiveRecord: 18.7ms | Allocations: 39743)
+
+
+Started GET "/albums/86" for ::1 at 2021-04-15 11:18:22 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"86"}
+  [1m[36mAlbum Load (0.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 10ms (Views: 4.8ms | ActiveRecord: 1.5ms | Allocations: 1610)
+
+
+Started GET "/albums/86" for ::1 at 2021-04-15 11:18:24 -0400
+Started GET "/albums" for ::1 at 2021-04-15 11:18:24 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"86"}
+Started GET "/auth/verify" for ::1 at 2021-04-15 11:18:24 -0400
+Processing by AuthenticationController#verify as HTML
+Started GET "/album/:album_id/reviews" for ::1 at 2021-04-15 11:18:24 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/album/:album_id/reviews"):
+  
+Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (2.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 86]]
+  [1m[36mAlbum Load (7.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 44ms (Views: 0.2ms | ActiveRecord: 6.5ms | Allocations: 10519)
+
+
+Completed 200 OK in 47ms (Views: 6.2ms | ActiveRecord: 2.9ms | Allocations: 10846)
+
+
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 15.5ms | ActiveRecord: 7.4ms | Allocations: 5936)
+
+
+Started GET "/albums/84" for ::1 at 2021-04-15 11:18:26 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"84"}
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 84]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.5ms | Allocations: 1382)
+
+
+Started GET "/albums/84" for ::1 at 2021-04-15 11:18:28 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"84"}
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 84]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 1380)
+
+
+Started GET "/albums/84" for ::1 at 2021-04-15 11:19:20 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"84"}
+Started GET "/album/:album_id/reviews" for ::1 at 2021-04-15 11:19:20 -0400
+Started GET "/albums" for ::1 at 2021-04-15 11:19:20 -0400
+Processing by AlbumsController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/album/:album_id/reviews"):
+  
+Started GET "/auth/verify" for ::1 at 2021-04-15 11:19:20 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAlbum Load (1.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+Completed 200 OK in 81ms (Views: 79.4ms | ActiveRecord: 1.4ms | Allocations: 8438)
+
+
+  [1m[36mAlbum Load (4.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 3.4ms | Allocations: 3351)
+
+
+  [1m[36mReview Load (1.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 84]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 95ms (Views: 4.0ms | ActiveRecord: 5.6ms | Allocations: 11508)
+
+
+Started GET "/albums/84" for ::1 at 2021-04-15 11:19:39 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"84"}
+  [1m[36mAlbum Load (0.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 84]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.6ms | Allocations: 1380)
+
+
+Started GET "/albums/84" for ::1 at 2021-04-15 11:21:07 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"84"}
+Started GET "/album/:album_id/reviews" for ::1 at 2021-04-15 11:21:07 -0400
+Started GET "/albums" for ::1 at 2021-04-15 11:21:07 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/album/:album_id/reviews"):
+  
+Processing by AlbumsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-04-15 11:21:07 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAlbum Load (16.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mAlbum Load (3.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mReview Load (2.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 84]]
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 3.2ms | Allocations: 6222)
+
+
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+Completed 200 OK in 55ms (Views: 6.2ms | ActiveRecord: 18.0ms | Allocations: 14547)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 20ms (Views: 0.4ms | ActiveRecord: 4.1ms | Allocations: 7314)
+
+
+Started GET "/albums/84" for ::1 at 2021-04-15 11:21:13 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"84"}
+  [1m[36mAlbum Load (0.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 84]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.8ms | Allocations: 1380)
+
+
+Started POST "/albums/84/reviews" for ::1 at 2021-04-15 11:21:29 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"review"=>{"review"=>"First up; this is a great metal album. The composition and songwriting, etc are truly classic."}, "album_id"=>"84"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:20:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:29:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:29:in `create'
+  [1m[36mReview Create (13.8ms)[0m  [1m[32mINSERT INTO "reviews" ("review", "user_id", "album_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["review", "First up; this is a great metal album. The composition and songwriting, etc are truly classic."], ["user_id", 18], ["album_id", 84], ["created_at", "2021-04-15 15:21:29.779755"], ["updated_at", "2021-04-15 15:21:29.779755"]]
+  ↳ app/controllers/reviews_controller.rb:29:in `create'
+  [1m[36mTRANSACTION (22.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reviews_controller.rb:29:in `create'
+Completed 201 Created in 48ms (Views: 0.5ms | ActiveRecord: 37.4ms | Allocations: 3973)
+
+
+Started GET "/albums/84" for ::1 at 2021-04-15 11:21:29 -0400
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"84"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:44:in `set_album'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."album_id" = $1[0m  [["album_id", 84]]
+  ↳ app/controllers/albums_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 1469)
+
+

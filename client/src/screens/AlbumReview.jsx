@@ -35,13 +35,15 @@ export default function AlbumDetails(props) {
       </div>
       
       <div className='reviews-container'>
-      <h1>Reviews</h1>
+        <h1>Reviews</h1>
+      
       {
         albumItem?.reviews.map(review => (
-          <div>{review.review}</div>
+          <div className='mapped-review'>{review.review}</div>
 
         ))
-      }
+          }
+         
 
       <Link to={`/albums/${albumItem?.id}/reviews/new`}>
         <button className='add-a-review'>Add a Review</button>
