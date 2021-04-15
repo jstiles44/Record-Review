@@ -76,22 +76,6 @@ src
 
 ```
 
-#### Time Estimates
-
-
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Create backend/Database  |    H     |     3 hrs      |     0 hrs     |   TBD    |
-| Models |    H     |     1 hr      |     0 hrs     |     TBD     |    
-| Controllers |   H     |     1 hr  |     0 hrs       |     TBD   |
-| Routes |    H     |     1 hr      |     0 hrs     |     TBD     | 
-| Full Crud Back-End |    H     |     3 hrs      |     0 hrs     |     TBD     | 
-| Structuring React Components|    H     |     3 hrs      |     0 hrs     |     TBD     |
-| React Routes/Links |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| Full Crud Front-End |    H     |     4 hrs      |     0 hrs     |     TBD     | 
-| Styling/CSS |    H     |     6 hrs      |     0 hrs     |     TBD     | 
-| TOTAL               |    H     |     31 hrs      |    0 hrs     |     TBD     |
-
 
 <br>
 
@@ -111,11 +95,5 @@ src
 - Create youtube player functionality within app to listen to each album
 
 ***
-
-## Code Showcase
-
-
-
-## Code Issues & Resolutions
 
 
